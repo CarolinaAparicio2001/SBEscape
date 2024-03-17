@@ -1,5 +1,5 @@
 const headers = {
-    'X-RapidAPI-Key': '20942722a2mshe5187a061cc9c8bp12fafbjsnfc54a3819466',
+    'X-RapidAPI-Key': 'cb8d37ceddmsh92232755cee698bp1bd4c2jsn1b6c50b12d32',
     'X-RapidAPI-Host': 'tripadvisor16.p.rapidapi.com'
 }
 
