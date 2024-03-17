@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel and flight booking website</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body background="../src//assets/header-background.jpg">
+    <header>
+        <nav>
+            <div class="nav_actions">
+                <div class="dropdown">
+                    <button class="action_btn">
+                        Choose currency
+                        <div class="red_square">
+                            <svg class="icon1"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                        </div>
+                    </button>
+                    <div class="dropdown-content">
+                        <button onclick="changeCurrency('EUR')">€ (Euro)</button>
+                        <button onclick="changeCurrency('USD')">$ (Dollar)</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="main_section">
+        
+
+        <h1>SBEscape</h1>
+
+        <p>
+            SBEscape streamlines your travel by effortlessly finding flights and
+            accommodations, ensuring a seamless journey from start to finish for the Nova SBE
+            community.
+        </p>
+
+        <div class="redirect_btns">
+            <a href="hotel.html">
+                Find a Hotel
+            </a>
+            <a href="flight.html">
+                Find a Flight
+            </a>
+        </div>
+    </section>
+    <script src="../src/js/home.js"></script>
+</body>
+
+</html>

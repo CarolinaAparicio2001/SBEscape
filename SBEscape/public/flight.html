@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Flight</title>
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/flight.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <div class="logo">
+                    SBEscape
+                </div>
+            </a>
+
+            <div class="nav_actions">
+                <div class="dropdown">
+                    <button class="action_btn">
+                        Choose currency
+                        <div class="red_square">
+                            <svg class="icon1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#ffffff"
+                                    d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="dropdown-content">
+                        <button onclick="changeCurrency('EUR')">€ (Euro)</button>
+                        <button onclick="changeCurrency('USD')">$ (Dollar)</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="heading">
+            <h1>Find a Flight</h1>
+            <a href="hotel.html">Go to Hotels</a>
+        </section>
+
+        <section id="search_flight">
+            <div class="filter_options">
+                <div class="inputs">
+
+                    <div class="input">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="from" class="from_input">
+                        <div class="autocomplete_cities">
+
+                        </div>
+                    </div>
+
+                    <div class="input">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="to" class="to_input">
+                        <div class="autocomplete_cities2">
+
+                        </div>
+                    </div>
+                    <div class="input">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <input type="date" placeholder="Departure (dd/mm/yy)" class="departure_input">
+                    </div>
+
+                    <div class="input">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <input type="date" placeholder="Return date" class="return_input">
+                    </div>
+
+                </div>
+
+                <div class="down">
+                    <div class="text">
+                        <h2 class="flight_details">1 adult, Economy</h2>
+                        <svg class="icon1" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path fill="black"
+                                d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                        </svg>
+
+                        <div class="change_count">
+                            <div class="adults">
+                                <h2>Adults</h2>
+                                <div class="num">
+                                    <div class="minus">-</div>
+                                    <span>1</span>
+                                    <div class="plus">+</div>
+                                </div>
+                            </div>
+                            <div class="children">
+                                <h2>Children</h2>
+                                <div class="num">
+                                    <div class="minus">-</div>
+                                    <span>0</span>
+                                    <div class="plus">+</div>
+                                </div>
+                            </div>
+                            <div class="classes">
+                                <h2>Class</h2>
+                                <select name="classes" class="class_select" id="">
+                                    <option value="ECONOMY">Economy</option>
+                                    <option value="PREMIUM_ECONOMY">Premium Economy</option>
+                                    <option value="BUSINESS">Business</option>
+                                    <option value="FIRST">First</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="nav_actions">
+
+                </div>
+                <button class="explore">
+                    EXPLORE
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="searched_flights">
+            <div class="filters">
+                <h2>Filters</h2>
+
+                <h3>Stops</h3>
+                <div class="stops">
+                    <div class="stop_option">
+                        <input type="checkbox" checked="true" name="stop0" value="0">
+                        <label for="stop0">Direct</label>
+                    </div>
+                    <div class="stop_option">
+                        <input type="checkbox" checked="true" name="stop1" value="1">
+                        <label for="stop1">1 stop</label>
+                    </div>
+                    <div class="stop_option">
+                        <input type="checkbox" checked="true" name="stop2" value="2">
+                        <label for="stop2">2+ stops</label>
+                    </div>
+
+                </div>
+
+                <h3>Airlines</h3>
+                <div class="airlines">
+
+                </div>
+
+            </div>
+
+            <div class="flight_booking">
+                <div class="border">
+                    <div class="colorborder"></div>
+                </div>
+                <span class="result_info"></span>
+
+                <div class="flights_container">
+                    <div class="flight_card">
+                        <div class="flight_info">
+                            <div class="departure">
+                                <img src="" alt="">
+                                <div class="time_and_airports">
+                                    <div class="time">15:00-19:30</div>
+                                    <div class="airports">LIS - MAD</div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="duration_and_stops">
+                                    <h5>3h 30</h5>
+                                    <h5>No stop</h5>
+                                </div>
+                            </div>
+                            <div class="return">
+                                <img src="" alt="">
+                                <div class="time_and_airports">
+                                    <div class="time">15:00-19:30</div>
+                                    <div class="airports">MAD - LIS</div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="duration_and_stops">
+                                    <h5>3h 30</h5>
+                                    <h5>No stop</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="booking_info">
+                            <div class="price">$30</div>
+                            <span>Round trip</span>
+                            <a href="">Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="default_flights">
+            <div class="top">
+                <div class="point">
+                    <div class="colorpoint"></div>
+                </div>
+            </div>
+
+            <div class="middlepart">
+                <div class="text">
+
+                    <h2>Most Popular Destinations</h2>
+
+                </div>
+                <div class="totalcards">
+                    <div class="card">
+                        <img src="https://www.fodors.com/wp-content/uploads/2018/10/HERO_UltimateRome_Hero_shutterstock789412159.jpg"
+                            alt="">
+                        <div class="bottom">
+                            <h3>Rome, Italy</h3>
+                            <h4>Embark on a journey to Rome, where
+                                ancient wonders meet modern charm.
+                                Explore iconic landmarks like the Colosseum
+                                and Vatican City, immersing yourself in a rich
+                                tapestry of history and culture.</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+
+                        <img src="https://www.viajaquepassa.com.br/wp-content/uploads/2021/02/torre-eiffel-paris.png"
+                            alt="">
+                        <div class="bottom">
+                            <h3> Paris, France
+                            </h3>
+                            <h4>Discover the timeless allure of Paris, a city
+                                that effortlessly blends history, romance, and
+                                culture. Iconic landmarks such as the Eiffel
+                                Tower, Louvre Museum, and Notre-Dame
+                                beckon to be explored, while charming
+                                cobblestone streets invite leisurely strolls.</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://cdn-bmalj.nitrocdn.com/uirOOtSrYrqqUksKHkiSCjZGZlPeXsmk/assets/images/optimized/rev-88a144f/theplanetd.com/images/Cities-in-Italy-Rome.jpg"
+                            alt="">
+                        <div class="bottom">
+                            <h3>London, UK </h3>
+                            </h3>
+
+                            <h4>London, a dynamic fusion of history and modernity.
+                                Explore iconic landmarks, from Buckingham Palace
+                                to the British Museum, and wander along the vibrant
+                                Thames River.</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="https://kit.fontawesome.com/2b2fc3c9be.js" crossorigin="anonymous"></script>
+    <script src="../src/js/flight.js"></script>
+    <script src="../src/js/home.js"></script>
+</body>
+
+</html>
