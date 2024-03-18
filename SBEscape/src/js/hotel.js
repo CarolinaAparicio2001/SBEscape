@@ -1,4 +1,3 @@
-
 const locationInput = document.querySelector('.location_input');
 const checkIn = document.querySelector('.check_in');
 const checkOut = document.querySelector('.check_out');
